@@ -58,6 +58,7 @@ cd
 cd $HOME/.local
 mkdir scripts
 cd
+mkdir src
 ```
 
 - add user.js from https://github.com/yokoffing/Betterfox
