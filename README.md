@@ -41,14 +41,14 @@ sudo dnf install ffmpeg-libs libva libva-utils
 sudo dnf install -y openh264 gstreamer1-plugin-openh264 mozilla-openh264
 sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 
-# intel stuff. don't paste these if you don't have intel
+# intel stuff
 sudo dnf swap libva-intel-media-driver intel-media-driver --allowerasing
 sudo dnf install libva-intel-driver
 ```
 
 **fix stuff to clone dev-env:**
 
-- setup your default directories:
+- setup default directories:
 
 ```bash
 mkdir $HOME/repos
@@ -61,7 +61,7 @@ cd
 ```
 
 - add user.js from https://github.com/yokoffing/Betterfox
-- setup your passwords directory
+- setup passwords directory
 - install syncthing and setup syncthing:
 
 ```bash
