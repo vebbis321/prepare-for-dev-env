@@ -37,9 +37,6 @@ sudo dnf group install -y sound-and-video # Installs useful Sound and Video comp
 # H/W Video Acceleration
 sudo dnf install ffmpeg-libs libva libva-utils
 
-# fix firefox (also remember to add betterfox and enable OpenH264 in firefox)
-sudo dnf install -y openh264 gstreamer1-plugin-openh264 mozilla-openh264
-sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 
 # intel stuff
 sudo dnf swap libva-intel-media-driver intel-media-driver --allowerasing
@@ -55,13 +52,15 @@ mkdir $HOME/repos
 cd $HOME/repos
 mkdir assembly  bash  c  js_ts  keyboards  python
 cd
-cd $HOME/.local
-mkdir scripts
-cd
-mkdir src
 ```
 
-- add user.js from https://github.com/yokoffing/Betterfox
+- add user.js from https://github.com/yokoffing/Betterfox 
+- add openh264:
+```bash
+# fix firefox (also remember to add betterfox and enable OpenH264 in firefox)
+sudo dnf install -y openh264 gstreamer1-plugin-openh264 mozilla-openh264
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
+```
 - setup passwords directory
 - install syncthing and setup syncthing:
 
