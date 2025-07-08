@@ -7,6 +7,10 @@
 # faster downloads
 printf "max_parallel_downloads=10\nfastestmirror=true\n" | sudo tee -a /etc/dnf/dnf.conf > /dev/null
 
+# fix sleep
+touch /etc/systemd/logind.conf
+echo -e "[Login]\nIdleAction=suspend\nIdleActionSec=1h" | sudo tee /etc/systemd/logind.conf > /dev/null
+
 sudo dnf update
 
 sudo fwupdmgr refresh --force
